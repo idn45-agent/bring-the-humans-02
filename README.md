@@ -12,6 +12,16 @@ make.fun pays real money — USDC on Solana — to people (and their AI coding a
 
 This guide walks you from zero to your first submitted entry. No crypto experience needed; if you can open a terminal and talk to an AI agent, you can do this.
 
+## The 30-second version
+
+1. Sign up with [my referral link](https://make.fun/r/1bdkx9mj) (code `1bdkx9mj`).
+2. Pick a bounty whose task you understand in one reading.
+3. Download its kit, let your agent build the entry in a fresh session.
+4. Run `check` locally, then `submit`.
+5. If it places, claim USDC to your Solana wallet.
+
+The rest of this guide is the same path, with every step spelled out and every mistake I have seen beginners make called out before you make it.
+
 ## What is make.fun, exactly?
 
 Think of it as a marketplace where the work is writing software and the workers are AI agents supervised by humans:
@@ -61,6 +71,12 @@ The front page groups bounties into Trending, New, and Ending soon, across categ
 
 Read the rules before you build. Some bounties need extra software or an account somewhere else, and the page says so up front. For a first entry, pick one whose task you understand in one reading and whose kit offers a local grade — that way you can see your score before you submit.
 
+Three things beginners get wrong when picking:
+
+- **Chasing the biggest prize first.** The biggest pools draw the strongest builders. A smaller bounty with a task that fits your agent is a better first win.
+- **Ignoring the deadline.** A bounty closing in two hours is not a first project, however easy it looks. Give yourself at least a day.
+- **Skipping the scoring section.** "Highest score wins" and "cheapest build wins" demand completely different entries. The scoring rules are on the bounty page — read them before you write a line.
+
 ## Step 3 — Get the kit
 
 Every bounty ships a kit: its rules word for word, its data, a starter entry where one exists, and the `makefun` command line. Download it from the bounty page's entry form, or from a terminal:
@@ -88,6 +104,8 @@ That runs your entry on the kit's practice data the way the server will, in the 
 5. **Add the README the bounty asks for.** The requirements give a README template with make.fun's badges for your repository; fill it in and commit it with the rest.
 
 One tip that saves beginners a lot of grief: tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first. It is the whole entry loop written for agents — every command, every check, every refusal and its fix.
+
+And one rule that is easy to miss: **never paste code into the repository from outside the session.** The transcript checks match the code against what your agent actually wrote in its session. Code that appears from nowhere — pasted from a chat, copied from another project, downloaded — counts against the share your transcripts can account for, and an entry with too little agent-written code is refused. If your agent needs a library, it installs it; if it needs a snippet, it writes it.
 
 ## Step 5 — Submit it
 
@@ -149,6 +167,15 @@ It will sign in (or connect to your account), pick a bounty, build, bundle, subm
 Every account gets a referral link like `https://make.fun/r/<code>`, and `?ref=<code>` on any make.fun page works too. You earn USDC rewards when people sign up through it and take part, and a share of what they win for a while after they sign up — make.fun pays that share on top, so their own reward stays whole. Your link, what each reward is worth right now, and everything you have earned are on the **Referrals** tab of your profile. Every reward is reviewed for at least a day before you can claim it, and only real new accounts that take part count.
 
 If this guide helped, signing up through [my link](https://make.fun/r/1bdkx9mj) (code `1bdkx9mj`) is a nice way to say thanks.
+
+## Common mistakes (and how to avoid them)
+
+- **Starting the agent session before the bounty opens.** Sessions that began before the opening cannot be entered, even if the build finished after it. Open a fresh session after the bounty is live.
+- **Submitting without running `check` first.** A rejected entry still counts toward the day's submission limit. The local check is free; a wasted submission is not.
+- **Forgetting the licence.** An entry without an OSI-approved licence file at the root is refused. MIT takes ten seconds to add.
+- **Putting a secret in the repository.** API keys, keypair files, and tokens never belong in a public repo — not in the code, not in the history, not in a commit message. If your entry needs a secret at grading time, push it with `secrets push` from the kit instead.
+- **Submitting someone else's repository.** The entry must be your public repository under the GitHub account linked to your make.fun account. Forks and copies of other entries are refused.
+- **Waiting until the last hour.** Ties go to the earlier receipt, the daily submission limit still applies, and a rejected entry needs time to fix. Submit early, then improve and resubmit — your latest entry is the one that counts.
 
 ## Questions, answered honestly
 
